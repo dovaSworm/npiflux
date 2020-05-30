@@ -7,6 +7,7 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
     links.forEach(link => {
         link.classList.toggle("fade");
+        // link.addEventListener)
     });
     lines.forEach(line => {
         line.classList.toggle("hamb-open");
@@ -30,39 +31,39 @@ $(() => {
         var scrollPosition = $(window).scrollTop();
         console.log(scrollPosition);
         if ($(window).width() <= 768) {
-            if (scrollPosition >= 200) {
+            if (scrollPosition >= 2300) {
                 $(".who div.row").css("opacity", "1");
                 $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
                 $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
             }
-            if (scrollPosition >= 600) {
+            if (scrollPosition >= 2800) {
                 $(".why div.row").css("opacity", "1");
                 $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
                 $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
             }
-            if (scrollPosition >= 1000) {
-                $("#services h2").addClass("anima-down-up")
+            if (scrollPosition >= 250) {
+                $("#services h3").addClass("anima-down-up")
             }
         } else {
-            if (scrollPosition >= 470) {
+            if (scrollPosition >= 2260) {
                 $("nav").addClass('navbg');
                 $(".who div.row").css("opacity", "1");
                 $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
                 $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
             }
-            if (scrollPosition >= 580) {
+            if (scrollPosition >= 870) {
                 $("nav").addClass('navbg');
             }
-            if (scrollPosition <= 580) {
+            if (scrollPosition <= 870) {
                 $("nav").removeClass('navbg');
             }
-            if (scrollPosition >= 1200) {
+            if (scrollPosition >= 2980) {
                 $(".why div.row").css("opacity", "1");
                 $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
                 $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
             }
-            if (scrollPosition >= 1600) {
-                $("#services h2").addClass("anima-down-up");
+            if (scrollPosition >= 500) {
+                $("#services h3").addClass("anima-down-up");
             }
         }
     }
