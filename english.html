@@ -43,6 +43,7 @@
             <p>WE ARE NPI FLUX.</p>
             <h1>Best solution for pcb asembling,<br>manufacturing & develop of electronic boards</h1>
             <a href="#about">Learn more</a>
+            <div class="d-flex arrow-anima1"><span>scroll down</span><i class="ml-4 fas fa-long-arrow-alt-right fa-3x"></i></div>
         </div>
     </section>
     <main>
@@ -183,25 +184,23 @@
             <div class="row no-gutters mt-md-5">
                 <div class="col-12 col-md-6  m-auto p-2">
                     <!-- <div> -->
-                    <div class="col-12 text-center">
-                        <h4 class="section-heading"><i class="fas fa-map-marker-alt"></i></h4>
+                    <div class="col-12 my-3 d-flex align-items-center"><i class="fas d-inline fa-map-marker-alt"></i>
                         <address>Majora Zorana Radosavljevića 374<br />Batajnica-Beograd, 11273</address>
                     </div>
-                    <div class="col-12 text-center">
-                        <h4 class="section-heading"><i class="fas fa-envelope"></i></h4>
-                        <a href="mailto:rddesignanddev@gmail.com">npiflux@gmail.com</a>
+                    <div class="col-12 my-3 d-flex align-items-center"><i class="fas d-inline fa-envelope"></i>
+                        <a href="mailto:office@npiflux.rs">office@npiflux.rs</a>
                     </div>
-                    <div class="col-12 text-center">
-                        <h4 class="section-heading"><i class="fas fa-mobile-alt"></i></h4>
+                    <div class="col-12 my-3 d-flex align-items-center"><i class="fas d-inline fa-mobile-alt"></i>
                         <a class="text-left" href="tel:+38162/617-050">062/617-050</a>
                     </div>
-                    <div class="col-12 text-center">
-                        <h4 class="section-heading"><i class="fas fa-clock"></i></h4>
-                        <p class="mb-0">mon-fri: 8h-20h</p>
-                        <p class="mb-0">sut: 8h-16h</p>
-                        <p class="mb-0">we don't work on Sundays</p>
+                    <div class="col-12 my-3 d-flex align-items-center"><i class="fas d-inline fa-clock"></i>
+                        <div>
+                            <p class="mb-0">mon-fri: 8h-20h</p>
+                            <p class="mb-0">sut: 8h-16h</p>
+                            <p class="mb-0">we don't work on Sundays</p>
+                        </div>
                     </div>
-                    <div class="col-12 text-center social">
+                    <div class="col-12 social">
                         <a href="#facebook"><i class="fab fa-facebook-square"></i></a>
                         <a href="#linkedin"><i class="fab fa-linkedin"></i></a>
                     </div>
@@ -213,13 +212,14 @@
                     </h3>
                     <form method="POST" name="contactform" action="contact-form-handler.php">
                         <p>
-                            <input type="text" name="name" placeholder="Your name">
+                            <label for="name">Name</label>
+                            <input type="text" name="name">
                         </p>
-                        <p>
-                            <input type="text" name="email" placeholder="Your email">
+                        <p><label for="email">Your email</label>
+                            <input type="text" name="email">
                         </p>
-                        <p>
-                            <textarea rows="6" name="message" placeholder="Message"></textarea>
+                        <p><label for="message">Message</label>
+                            <textarea rows="6" name="message"></textarea>
                         </p>
                         <button role="button" type="submit" value="Submit">Send message</button>
                     </form>
@@ -238,10 +238,29 @@
     </section>
     <footer>
         <div class="container">
-            <div class="row no-gutters flex-column text-center">
-                <div class="text-justify ml-md-auto col-sm-12 col-md-4">Uslužna proizvodnja elektronskih uređaja, montaža štampanih ploča, sklapanje gotovih proizvoda, PCB Asemblaža, SMD asemblaza, TH, PTH, usluzna SMD proizvodnja. Uslužna proizvodnja elektronike, elektronskih sklopov, ulsužna asemblaža elektronike
+            <div class="row no-gutters text-center">
+                <div class="text-justify col-sm-12 col-md-4">
+                    <ul>
+                        <li>
+                            <h5>NPI flux</h5>
+                        </li>
+                        <li>Srbija</li>
+                        <li>Beograd, Batajnica 11273</li>
+                        <li>Majora Zorana Radosavljevića 374</li>
+                        <li><a href="mailto:office@npiflux.rs">office@npiflux.rs</a></li>
+                        <li><a href="tel:+38162/617-050">062/617-050</a></li>
+                    </ul>
+                </div>
+                <div class="text-justify col-sm-12 col-md-4">
+                    <h5>Partneri</h5>
+                    <ul>
+                        <li><a href="https://protech-electronics.rs/">Pro-technology electronics</a></li>
+                        <li><a href="https://htecgroup.com/contact/ ">HTEC group</a></li>
+                    </ul>
+                </div>
+                <div class="text-justify col-sm-12 col-md-4">Uslužna proizvodnja elektronskih uređaja, montaža štampanih ploča, sklapanje gotovih proizvoda, PCB Asemblaža, SMD asemblaza, TH, PTH, usluzna SMD proizvodnja. Uslužna proizvodnja elektronike, elektronskih sklopov, ulsužna asemblaža elektronike
                     elektronskih sklopova</div>
-                <div class="m-auto"><small>Developed and designed by <a href="#">RD design</a></small>
+                <div class="w-100 text-center"><small>Developed and designed by <a href="http://dova.epizy.com/?i=1">RD design</a></small>
                 </div>
                 <p class="text-center w-100"><small>Copyright © NPIFLUX. All Rights Reserved</small></p>
             </div>
