@@ -64,10 +64,10 @@ try{
     //Server settings
     $mail->SMTPDebug = false;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'mail.npiflux.rs';                    // Set the SMTP server to send through
+    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'office1@npiflux.rs';                     // SMTP username
-    $mail->Password   = '12345NPI12345NPI';                               // SMTP password
+    $mail->Username   = 'danijeldoveden.55@gmail.com';                     // SMTP username
+    $mail->Password   = 'la1983belo';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     $mail->SMTPOptions = array(
@@ -80,10 +80,7 @@ try{
     $from = $_POST["email"];
     $name = $_POST["name"];
     $body = $_POST["message"];
-    // $name = $_POST["name"];
-    $mail->addAddress('office1@npiflux.rs'); // Set the recipient of the message.
-    // $mail->From = $from;
-    // $mail->FromName = $name;
+    $mail->addAddress('danijeldoveden.55@gmail.com'); // Set the recipient of the message.
     $mail->AddReplyTo($from, $name);
     $mail->setFrom($from, $name); // Set the sender of the message.
     $mail->Subject = 'Message from website'; // The subject of the message

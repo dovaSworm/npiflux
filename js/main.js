@@ -41,9 +41,9 @@ $(() => {
                 $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
                 $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
             }
-            if (scrollPosition >= 250) {
-                $("#services h3").addClass("anima-down-up");
-            }
+            // if (scrollPosition >= 250) {
+            //     $("#services h3").addClass("anima-down-up");
+            // }
         } else if ($(window).width() >= 768 && $(window).width() < 1024) {
             if (scrollPosition >= 870) {
                 $("nav").addClass('navbg');
