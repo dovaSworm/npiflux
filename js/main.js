@@ -3,6 +3,9 @@ const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 const lines = document.querySelectorAll(".line");
 
+var ww = $(window).width();
+var wh = $(window).height();
+
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
     links.forEach(link => {
@@ -25,99 +28,35 @@ links.forEach(link => {
 });
 
 $(() => {
-
     ////ANIMA
+        let hero = document.getElementById('hero').getBoundingClientRect().bottom;
     function dodajAnimu() {
-        var scrollPosition = $(window).scrollTop();
-        console.log(scrollPosition);
-        if ($(window).width() < 768) {
-            if (scrollPosition >= 1700) {
-                $(".who div.row").css("opacity", "1");
-                $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
-                $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
-            }
-            if (scrollPosition >= 2270) {
-                $(".why div.row").css("opacity", "1");
-                $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
-                $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
-            }
-            // if (scrollPosition >= 250) {
-            //     $("#services h3").addClass("anima-down-up");
-            // }
-        } else if ($(window).width() >= 768 && $(window).width() < 1024) {
-            if (scrollPosition >= 870) {
-                $("nav").addClass('navbg');
-            }
-            if (scrollPosition <= 870) {
-                $("nav").removeClass('navbg');
-            }
-            if (scrollPosition >= 1200) {
-                $(".who div.row").css("opacity", "1");
-                $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
-                $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
-            }
-            if (scrollPosition >= 1700) {
-                $(".why div.row").css("opacity", "1");
-                $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
-                $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
-            }
-            if (scrollPosition >= 250) {
-                $("#services h3").addClass("anima-down-up");
-            }
-        } else if ($(window).width() >= 1024 && $(window).width() < 1200) {
-            if (scrollPosition >= 870) {
-                $("nav").addClass('navbg');
-            }
-            if (scrollPosition <= 870) {
-                $("nav").removeClass('navbg');
-            }
-            if (scrollPosition >= 1700) {
-                $(".who div.row").css("opacity", "1");
-                $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
-                $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
-            }
-            if (scrollPosition >= 2300) {
-                $(".why div.row").css("opacity", "1");
-                $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
-                $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
-            }
-            if (scrollPosition >= 250) {
-                $("#services h3").addClass("anima-down-up");
-            }
+        let whoCon = document.getElementById('who-con').getBoundingClientRect().top;
+        let whyCon = document.getElementById('why-con').getBoundingClientRect().top;
+        let servH3 = document.getElementById('serv-h3').getBoundingClientRect().top;
+        let scrollPosition = $(window).scrollTop();
+// console.log(scrollPosition + "   " + hero)
+        if (hero < scrollPosition) {
+            $("nav").addClass('navbg');
         } else {
-            if (scrollPosition >= 2260) {
-                $("nav").addClass('navbg');
-                $(".who div.row").css("opacity", "1");
-                $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
-                $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
-            }
-            if (scrollPosition >= 870) {
-                $("nav").addClass('navbg');
-            }
-            if (scrollPosition <= 870) {
-                $("nav").removeClass('navbg');
-            }
-            if (scrollPosition >= 2980) {
-                $(".why div.row").css("opacity", "1");
-                $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
-                $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
-            }
-            if (scrollPosition >= 500) {
-                $("#services h3").addClass("anima-down-up");
-            }
+            $("nav").removeClass('navbg');
+        }
+        if (servH3 < scrollPosition + hero) {
+            $("#services h3").addClass("anima-down-up");
+        }
+        if (whoCon < wh / 2) {
+            $(".who div.row").css("opacity", "1");
+            $(".who div.col-sm-12:nth-of-type(1)").addClass("who-anima-left");
+            $(".who div.col-sm-12:nth-of-type(2)").addClass("who-anima-right3");
+        }
+        if (whyCon < wh / 2) {
+            $(".why div.row").css("opacity", "1");
+            $(".why div.col-sm-12:nth-of-type(1)").addClass("who-anima-right2");
+            $(".why div.col-sm-12:nth-of-type(2)").addClass("who-anima-right");
         }
     }
     $(window).on('scroll', () => {
         dodajAnimu();
-    });
-    $("#services div.col-md-6").mouseover(function() {
-        $("div.port-card", $(this)).addClass("service-anima");
-        $(".card-inner, h4", $(this)).addClass("card-anima");
-    });
-
-    $("#services div.col-md-6").mouseout(function() {
-        $("div.port-card").removeClass("service-anima");
-        $(".card-inner, h4", $(this)).removeClass("card-anima");
     });
 
     // setTimeout(() => {
