@@ -9,6 +9,9 @@ composer.json
 composer.lock
 css/main.scss
 css/_variables.scss
+css/main.css.map
+css/variable.css.map
+css/variable.css
 # User-specific files
 *.rsuser
 *.suo
